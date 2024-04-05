@@ -3,20 +3,18 @@ package factory;
 import entity.Employee;
 import entity.PensionPlan;
 
-import javax.xml.crypto.Data;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class EmployeeFactory {
-    private static List<Employee> data = new ArrayList<>();
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private static final List<Employee> data = new ArrayList<>();
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     public static void init() {
         PensionPlan pensionPlan1 = new PensionPlan(1089L, "2023-01-17", 100.00);
@@ -33,7 +31,7 @@ public class EmployeeFactory {
         data.add(employee4);
     }
 
-    public static void printEmployeesAsJSONAscByLastNameAndDscByYearlySalariesAsJSON() {
+    public static void printEmployeesAscByLastNameAndDscByYearlySalariesAsJSON() {
         data.sort(Comparator
                 .comparing(Employee::getLastName)
                 .thenComparing(Employee::getYearlySalary, Comparator.reverseOrder()));

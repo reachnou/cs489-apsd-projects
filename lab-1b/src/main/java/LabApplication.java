@@ -6,7 +6,7 @@ public class LabApplication {
         EmployeeFactory.init();
         //Task B (1)
         System.out.println("========== Task B (1) ==========");
-        EmployeeFactory.printEmployeesAsJSONAscByLastNameAndDscByYearlySalariesAsJSON();
+        EmployeeFactory.printEmployeesAscByLastNameAndDscByYearlySalariesAsJSON();
         //Task B (2)
         System.out.println("========== Task B (2) ==========");
         EmployeeFactory.printEmployeesWhoQualifyForMonthlyUpcomingPensionEnrollsReportAsJSON();
